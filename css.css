@@ -21,7 +21,7 @@ body{
     height: 365px;
 }
 
-#bouton{
+.bouton{
     margin-top: 50px;
     color: white;
     background-color: rgb(32, 32, 32);
@@ -38,7 +38,7 @@ body{
     font-weight: bolder;
 }
 
-#bouton:hover{
+.bouton:hover{
     background-color: rgb(129, 129, 129);
     border-radius: 50px;
     color: rgb(0, 0, 0);
@@ -47,4 +47,9 @@ body{
 #gras{
     font-weight: bolder;
     font-size: 50px;
+}
+
+#result{
+    width: 1070px;
+    height: 365px;
 }
