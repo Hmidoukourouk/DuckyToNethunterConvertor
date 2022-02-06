@@ -2,13 +2,16 @@ p{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: rgb(190, 190, 190);
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 body{
     background-color: black;
 }
 .centreur{
-    margin-top: 300px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -16,16 +19,25 @@ body{
     align-items: center;
 }
 
-#textArea{
-    width: 1070px;
-    height: 365px;
-}
 
+
+.textFormat{
+    width: 80%;
+    height: 365px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border: 3px solid;
+    border-color: #404040;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    border-radius: 10px;
+}
 .bouton{
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: white;
     background-color: rgb(32, 32, 32);
-    font-size: 50px;
+    font-size: 20px;
     border-radius: 10px;
 
     border: none;
@@ -49,7 +61,10 @@ body{
     font-size: 50px;
 }
 
-#result{
-    width: 1070px;
-    height: 365px;
+.buttonContainer{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
