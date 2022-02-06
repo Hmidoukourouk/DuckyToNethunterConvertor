@@ -1,0 +1,50 @@
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(190, 190, 190);
+}
+
+body{
+    background-color: black;
+}
+.centreur{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#textArea{
+    width: 1070px;
+    height: 365px;
+}
+
+#bouton{
+    margin-top: 50px;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    font-size: 50px;
+    border-radius: 10px;
+
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.2s;
+
+    font-weight: bolder;
+}
+
+#bouton:hover{
+    background-color: rgb(129, 129, 129);
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+}
+
+#gras{
+    font-weight: bolder;
+    font-size: 50px;
+}
