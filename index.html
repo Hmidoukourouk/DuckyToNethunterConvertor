@@ -4,26 +4,28 @@
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <meta charset="utf-8">
 
+
 <!-- HTML Meta Tags -->
-<title>convertiseur</title>
-<meta name="description" content="Petit récapitulatif du quinquennat de notre leader suprême : JUPITER">
+<title>TextTo_HID</title>
+<meta name="description" content="Convertit un texte pour qu'il soit exécuté par nethunter HID">
 
 <!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://cinqansdeplus.vercel.app/">
+<meta property="og:url" content="https://ducky-to-nethunter-script-convertor.vercel.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="5 ans de plus ?">
-<meta property="og:description" content="Petit récapitulatif du quinquennat de notre leader suprême : JUPITER">
-<meta property="og:image" content="https://cinqansdeplus.vercel.app/images/preview.png">
+<meta property="og:title" content="TextTo_HID">
+<meta property="og:description" content="Convertit un texte pour qu'il soit exécuté par nethunter HID">
+<meta property="og:image" content="https://ducky-to-nethunter-script-convertor.vercel.app/icon.jpg">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="cinqansdeplus.vercel.app">
-<meta property="twitter:url" content="https://cinqansdeplus.vercel.app/">
-<meta name="twitter:title" content="5 ans de plus ?">
-<meta name="twitter:description" content="Petit récapitulatif du quinquennat de notre leader suprême : JUPITER">
-<meta name="twitter:image" content="https://cinqansdeplus.vercel.app/images/preview.png">
+<meta property="twitter:domain" content="ducky-to-nethunter-script-convertor.vercel.app">
+<meta property="twitter:url" content="https://ducky-to-nethunter-script-convertor.vercel.app/">
+<meta name="twitter:title" content="TextTo_HID">
+<meta name="twitter:description" content="Convertit un texte pour qu'il soit exécuté par nethunter HID">
+<meta name="twitter:image" content="https://ducky-to-nethunter-script-convertor.vercel.app/icon.jpg">
 
 <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+      
 
 <link href="css.css" rel="stylesheet">
 <script src="js.js"></script>
@@ -34,13 +36,20 @@
     <p id="gras" >Convertiseur pour les STRINGS nethunter</p>
     <p>Ce script place automatiquement les balises SPACES, ENTER et STRING pour être adapté à nethunterHID</p>
     
+    <div class="checkBoxList">
+        <div class="checkboxContainer">
+            <input class="checkBox" type="checkbox" id="powershell">
+            <label class="checkBox" for="powershell">open powershell mignifed</label>
+        </div>
+    </div>
+
     <textarea class="textFormat" id="textArea" type="text" name=textval placeholder="bonjour, il est temps de tester ce script,
 et je propose à tous d'en profiter grâce à la magie du
 PARTAGEEEEE
 ;)"></textarea>
 
 <div class="buttonContainer">
-    <button class="bouton" onclick="Conversion()" >CONVERTIR</button>
+    <button class="bouton" onclick="Translate()" >CONVERTIR</button>
 
     <button class="bouton" onclick="Copie()">COPIER</button>
 </div>

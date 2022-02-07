@@ -3,8 +3,26 @@ var finalResult
 var length;
 var firstCharacter;
 
-function Conversion() {
-    textval = document.getElementById("textArea").value;
+var temp;
+
+var winR = 'GUI r\nDELAY 500\n';
+var powershellLaunchCommand = 'powershell -noexit -command "[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth"';
+
+function Translate(){
+    finalResult = Conversion(false);
+    if (document.getElementById("powershell").checked){
+        finalResult = winR+ Conversion(true,powershellLaunchCommand)+"\nENTER\n"+ Conversion();
+    }
+    document.getElementById("result").innerHTML = finalResult;
+}
+
+function Conversion(keeping,val) {
+    if (keeping){
+        textval = val;
+    }else{
+        textval = document.getElementById("textArea").value;
+    }
+    
     length = textval.length;
 
     if (length == 0) {
@@ -28,7 +46,7 @@ function Conversion() {
         }
     
     finalResult = finalResult.replaceAll("├ÙM", " ");
-    document.getElementById("result").innerHTML = finalResult;
+    return finalResult;
 }
 
 function Copie() {
@@ -37,3 +55,5 @@ function Copie() {
 /* Copy the text inside the text field */
     document.execCommand("copy");
 }
+
+//powershell -noexit -command "[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth"
