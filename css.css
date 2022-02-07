@@ -23,7 +23,7 @@ body{
 
 .textFormat{
     width: 80%;
-    height: 200px;
+    height: 500px;
     background-color: rgb(37, 37, 37);
     color: white;
     border: 3px solid;
@@ -37,7 +37,7 @@ body{
     margin-bottom: 20px;
     color: white;
     background-color: rgb(32, 32, 32);
-    font-size: 15px;
+    font-size: 30px;
     border-radius: 10px;
 
     border: none;
@@ -67,4 +67,21 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+}
+
+@media (max-width: 1400px) {
+    .textFormat{
+        height: 200px;
+    }
+    .bouton{
+        font-size: 15px;
+    }
+    #gras{
+        font-weight: bolder;
+        font-size: 20px;
+        margin-top: 0;
+    }
+    p{
+        font-size: 15px;
+    }
 }

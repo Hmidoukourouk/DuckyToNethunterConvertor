@@ -8,8 +8,8 @@ function Conversion() {
     length = textval.length;
 
     if (length == 0) {
-        alert("fréro rentre un truc la");
-    } else {
+        textval = document.getElementById("textArea").placeholder;
+    }
         finalResult = "";
         firstCharacter = true;
         textval = textval.replaceAll("\n", "\nENTER\nSTRING├ÙM");
@@ -26,7 +26,7 @@ function Conversion() {
                 finalResult = (finalResult + textval.charAt(index));
             }
         }
-    }
+    
     finalResult = finalResult.replaceAll("├ÙM", " ");
     document.getElementById("result").innerHTML = finalResult;
 }

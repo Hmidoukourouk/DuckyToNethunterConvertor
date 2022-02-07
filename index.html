@@ -31,12 +31,12 @@
 <body>
 <div class="centreur">
     <p id="gras" >Convertiseur pour les STRINGS nethunter</p>
-    <p>ce script remplace les espaces par la balise "SPACE" et saute une ligne en remettant la balise STRING</p>
+    <p>Ce script place automatiquement les balises SPACES, ENTER et STRING pour être adapté à nethunterHID</p>
     
-    <textarea class="textFormat" id="textArea" type="text" name=textval>bonjour, il est temps de tester ce script,
+    <textarea class="textFormat" id="textArea" type="text" name=textval placeholder="bonjour, il est temps de tester ce script,
 et je propose à tous d'en profiter grâce à la magie du
 PARTAGEEEEE
-;)</textarea>
+;)"></textarea>
 
 <div class="buttonContainer">
     <button class="bouton" onclick="Conversion()" >CONVERTIR</button>
@@ -44,7 +44,6 @@ PARTAGEEEEE
     <button class="bouton" onclick="Copie()">COPIER</button>
 </div>
     <textarea class="textFormat" id="result" type="text" name=textval readonly>resultat</textarea>
-
 </div>
 </body>
 
