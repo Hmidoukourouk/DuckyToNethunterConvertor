@@ -6,12 +6,12 @@ var firstCharacter;
 var temp;
 
 var winR = 'GUI r\nDELAY 500\n';
-var powershellLaunchCommand = 'powershell -noexit -command "[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth"';
+var powershellLaunchCommand = '[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth';
 
 function Translate(){
     finalResult = Conversion(false);
     if (document.getElementById("powershell").checked){
-        finalResult = winR+ Conversion(true,powershellLaunchCommand)+"\nENTER\n"+ Conversion();
+        finalResult = winR +"STRING powershell\nENTER\nDELAY 1000\n"+ Conversion(true,powershellLaunchCommand)+"\nENTER\n"+ Conversion();
     }
     document.getElementById("result").innerHTML = finalResult;
 }
