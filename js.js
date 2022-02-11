@@ -8,6 +8,7 @@ var temp;
 var winR = 'GUI r\nDELAY 500\n';
 var powershellMinifiedLaunchCommand = '[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth';
 
+
 function Translate(){
     finalResult = Conversion(false);
     if (document.getElementById("powershell").checked && !document.getElementById("powershellMax").checked){
@@ -17,7 +18,11 @@ function Translate(){
     }else if (document.getElementById("powershell").checked && document.getElementById("powershellMax").checked){
         alert("coche pas les 2");
     }
-    document.getElementById("result").innerHTML = finalResult;
+    SendToWebsite(finalResult);
+}
+
+function SendToWebsite(text){
+    document.getElementById("result").innerHTML = text;
 }
 
 function Conversion(keeping,val) {
@@ -58,6 +63,14 @@ function Copie() {
     finalResult.select();
 /* Copy the text inside the text field */
     document.execCommand("copy");
+}
+
+function WallpaperChanger(){
+    var url = document.getElementById("url").value;
+    var outputName = document.getElementById("outputName").value;
+    var delay = document.getElementById("delay").value;
+    
+    SendToWebsite(winR +"STRING powershell\nENTER\nDELAY "+delay+"\nSPACE\nSTRING curl\nSTRING "+url+"\nSPACE\nSTRING -O\nSPACE\nSTRING Desktop\\"+ outputName +"\nSHIFT ENTER\nSTRING exit\nENTER\nWINDOWS d\nDELAY "+delay*0.5+"\nSTRING "+outputName+"\nSHIFT F10\nDELAY "+delay*0.5+"\nSTRING b");
 }
 
 //powershell -noexit -command "[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth"
