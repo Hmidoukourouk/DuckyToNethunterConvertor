@@ -6,12 +6,16 @@ var firstCharacter;
 var temp;
 
 var winR = 'GUI r\nDELAY 500\n';
-var powershellLaunchCommand = '[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth';
+var powershellMinifiedLaunchCommand = '[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth';
 
 function Translate(){
     finalResult = Conversion(false);
-    if (document.getElementById("powershell").checked){
-        finalResult = winR +"STRING powershell\nENTER\nDELAY 1000\n"+ Conversion(true,powershellLaunchCommand)+"\nENTER\n"+ Conversion();
+    if (document.getElementById("powershell").checked && !document.getElementById("powershellMax").checked){
+        finalResult = winR +"STRING powershell\nENTER\nDELAY 1000\n"+ Conversion(true,powershellMinifiedLaunchCommand)+"\nENTER\n"+ Conversion();
+    }else if(!document.getElementById("powershell").checked && document.getElementById("powershellMax").checked){
+        finalResult = winR +"STRING powershell\nENTER\nDELAY 1000\n"+ Conversion();
+    }else if (document.getElementById("powershell").checked && document.getElementById("powershellMax").checked){
+        alert("coche pas les 2");
     }
     document.getElementById("result").innerHTML = finalResult;
 }
