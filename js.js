@@ -70,7 +70,7 @@ function WallpaperChanger(){
     var outputName = document.getElementById("outputName").value;
     var delay = document.getElementById("delay").value;
     
-    SendToWebsite(winR +"STRING powershell\nENTER\nDELAY "+delay+"\nSPACE\nSTRING curl\nSTRING "+url+"\nSPACE\nSTRING -O\nSPACE\nSTRING Desktop\\"+ outputName +"\nSHIFT ENTER\nSTRING exit\nENTER\nWINDOWS d\nDELAY "+delay*0.5+"\nSTRING "+outputName+"\nSHIFT F10\nDELAY "+delay*0.5+"\nSTRING b");
+    SendToWebsite(winR +"STRING powershell\nENTER\nDELAY "+delay+"\nSTRING curl\nSPACE\nSTRING "+url+"\nSPACE\nSTRING -O\nSPACE\nSTRING Desktop\\"+ outputName +"\nSHIFT ENTER\nSTRING exit\nENTER\nWINDOWS d\nDELAY "+delay*3+"\nSTRING "+outputName+"\nSHIFT F10\nDELAY "+delay*0.5+"\nSTRING b");
 }
 
 //powershell -noexit -command "[console]::WindowWidth=1; [console]::WindowHeight=1; [console]::BufferWidth=[console]::WindowWidth"
