@@ -40,6 +40,7 @@ function Conversion(keeping,val) {
         finalResult = "";
         firstCharacter = true;
         textval = textval.replaceAll("\n", "\nENTER\nSTRING├ÙM");
+        textval = textval.replaceAll("⠀", "\nENTER\nSTRING├ÙM");
         length = textval.length;
         for (let index = 0; index < length; index++) {
             if (textval.charAt(index) == " ") {
